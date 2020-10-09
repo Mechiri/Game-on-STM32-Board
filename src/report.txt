@@ -1,0 +1,42 @@
+----------------------------------------
+Vinod Kumar Mechiri(vimech)
+Partner: David Morrison
+Lab 7 - report
+----------------------------------------
+[Question 1] The accelerometer/magnetometer comes pre-wired on the STM board. Open up the
+Accelerometer/Magnetometer Data Sheet and find the page with the Pin Descriptions. How many pins
+does it have? List the pins and their names. Next find the electrical specifications under the Electrical
+Characteristics section. How many volts (Vdd) are required to power the accelerometer/magnetometer?
+The accelerometer/magnetometer is sitting somewhere on the STM board. Try to find it and describe
+where it is.
+
+Pin# Name     Function
+1    Vdd_     IO Power supply for I/O pins
+2    SCL 	  Signal interface I 2 C serial clock (SCL)
+3    SDA      Signal interface I 2 C serial data (SDA)
+4    INT2     Inertial Interrupt 2
+5    INT1     Inertial Interrupt 1
+6    C1       Reserved capacitor connection (C1)
+7 	 GND      0 V supply
+8    Reserved Leave unconnected
+9    DRDY     Data ready
+10   Reserved Connect to GND
+11   Reserved Connect to GND
+12   SETP S/R capacitor connection (C2)
+13   SETC S/R capacitor connection (C2)
+14   Vdd      Power supply
+
+
+-Vdd Supply voltage 2.16 3.6 V
+-The accelerometer/magnetometer is located right side top corner of the board, i.e., above 5V pin.
+
+[Question 2] Why do we write to the accelerometer/magnetometer before we can read from them? What are the following lines of code doing? Hint: Look at the comments.
+-The I2C Master writing the address of the slave to select from which peripheral it has to read the data from continuosly.
+
+[Question 3] What do the following lines of code do? (It is only necessary to explain the accelerometer)
+-It is adding two consecutive bytes from the buffer each time and it is converting that data in to float to get the accelometer data.
+
+Difficulties and What did you learn
+-I got difficulty in figuring out the compass data values because the data it reads so fastly.
+
+Screen shot displaying I2C transactions is updated in the Lab7 folder.(URL: https://github.iu.edu/vimech/C335-Spring2020/tree/master/lab7)

@@ -1,0 +1,17 @@
+/*--------------------------------------*/
+
+Vinod Kumar Mechiri
+Partner: David Morrison
+Final Project Report
+
+/*--------------------------------------*/
+
+
+Project Name: Shooting Game
+
+Description:
+Simple shooting game, the goal of the game is oppenents(red blocks) should not reach the other side. The shooter(blue block) will stop opponents by shooting. The game has three levels. 
+
+We used accelometer readings for the movements of gun. We used user button peripheral for shooting the opponents. After completing each level the LED light show up. After you lost the game, you need to send a keyboard key to the UART for restarting. After each level the number of opponents and speed of the opponents increase. In between each level the gun will get powerup's by changing the gun color and increasing shooting power by three times. 
+
+I didn't have joystick therefore it is not included in the game.
